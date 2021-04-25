@@ -92,7 +92,6 @@ Do Until flag1 = True And flag2 = True Or timeout = 10
         
             ws.Range("C2:D" & lRowTemp).Value = wsTemp.Range("B2:C" & lRowTemp).Value
             wbTemp.Close savechanges:=False
-        filePath = Dir
         flag1 = True
     End If
     
@@ -109,9 +108,9 @@ Do Until flag1 = True And flag2 = True Or timeout = 10
         
             ws.Range("A2:B" & lRowTemp).Value = wsTemp.Range("A2:B" & lRowTemp).Value
             wbTemp.Close savechanges:=False
-        filePath = Dir
         flag2 = True
     End If
+    filePath = Dir
     timout = timeout + 1
 Loop
 
@@ -120,3 +119,4 @@ lRowMain = ws.Cells(Rows.Count, "A").End(xlUp).Row
 ws.Range("A2:A" & lRowMain).Replace what:=".", replacement:=""
 
 End Sub
+
