@@ -1,21 +1,102 @@
 stock_uniquecode|ftse_industry|ftse_sector
 FLTR|Consumer Discretionary|Travel and Leisure
-FLTR|Basic Materials|Industrial Metals and Mining
-FLTR|Industrials|General Industrials
-FLTR|Basic Materials|Industrial Metals and Mining
-FLTR|Consumer Discretionary|Media
-FLTR|Financials|Banks
-FLTR|Consumer Discretionary|Travel and Leisure
-FLTR|Technology|Software and Computer Services
-FLTR|Consumer Discretionary|Travel and Leisure
-FLTR|Industrials|Industrial Transportation
-FLTR|Consumer Discretionary|Household Goods and Home Construction
-FLTR|Financials|Banks
-FLTR|Industrials|General Industrials
-FLTR|Basic Materials|Industrial Metals and Mining
-FLTR|Basic Materials|Industrial Metals and Mining
-FLTR|Financials|Life Insurance
-FLTR|Basic Materials|Industrial Metals and Mining
-FLTR|Basic Materials|Industrial Metals and Mining
-FLTR|Basic Materials|Chemicals
-FLTR|Industrials|General Industrials
+EVR|Basic Materials|Industrial Metals and Mining
+SMDS|Industrials|General Industrials
+RIO|Basic Materials|Industrial Metals and Mining
+WPP|Consumer Discretionary|Media
+LLOY|Financials|Banks
+ENT|Consumer Discretionary|Travel and Leisure
+JET|Technology|Software and Computer Services
+IHG|Consumer Discretionary|Travel and Leisure
+AHT|Industrials|Industrial Transportation
+TW.|Consumer Discretionary|Household Goods and Home Construction
+NWG|Financials|Banks
+SKG|Industrials|General Industrials
+GLEN|Basic Materials|Industrial Metals and Mining
+ANTO|Basic Materials|Industrial Metals and Mining
+PRU|Financials|Life Insurance
+AAL|Basic Materials|Industrial Metals and Mining
+BHP|Basic Materials|Industrial Metals and Mining
+CRDA|Basic Materials|Chemicals
+SMIN|Industrials|General Industrials
+AVST|Technology|Software and Computer Services
+ITRK|Industrials|Industrial Support Services
+KGF|Consumer Discretionary|Retailers
+PSON|Consumer Discretionary|Media
+JMAT|Basic Materials|Chemicals
+OCDO|Consumer Staples|Personal Care, Drug and Grocery Stores
+HSBA|Financials|Banks
+STJ|Financials|Investment Banking and Brokerage Services
+RTO|Industrials|Industrial Support Services
+PSN|Consumer Discretionary|Household Goods and Home Construction
+MNDI|Industrials|General Industrials
+AV.|Financials|Life Insurance
+HLMA|Industrials|Electronic and Electrical Equipment
+WEIR|Industrials|Industrial Engineering
+BRBY|Consumer Discretionary|Personal Goods
+BT.A|Telecommunications|Telecommunications Service Providers
+BDEV|Consumer Discretionary|Household Goods and Home Construction
+ICP|Financials|Investment Banking and Brokerage Services
+LGEN|Financials|Life Insurance
+SDR|Financials|Investment Banking and Brokerage Services
+LSEG|Financials|Finance and Credit Services
+STAN|Financials|Banks
+PSH|Financials|Closed End Investments
+ADM|Financials|Non-life Insurance
+AVV|Technology|Software and Computer Services
+CRH|Industrials|Construction and Materials
+MNG|Financials|Investment Banking and Brokerage Services
+III|Financials|Investment Banking and Brokerage Services
+RSA|Financials|Non-life Insurance
+PHNX|Financials|Life Insurance
+SN.|Health Care|Medical Equipment and Services
+RMV|Real Estate|Real Estate Investment and Services
+IMB|Consumer Staples|Tobacco
+SMT|Financials|Closed End Investments
+FERG|Industrials|Industrial Support Services
+BNZL|Industrials|General Industrials
+MRO|Industrials|General Industrials
+EXPN|Industrials|Industrial Support Services
+SPX|Industrials|Industrial Engineering
+BME|Consumer Discretionary|Retailers
+REL|Consumer Discretionary|Media
+BARC|Financials|Banks
+CCH|Consumer Staples|Beverages
+SGE|Technology|Software and Computer Services
+WTB|Consumer Discretionary|Travel and Leisure
+BKG|Consumer Discretionary|Household Goods and Home Construction
+BLND|Real Estate|Real Estate Investment Trusts
+BATS|Consumer Staples|Tobacco
+SVT|Utilities|Gas, Water and Multi-utilities
+AUTO|Technology|Software and Computer Services
+RSW|Industrials|Electronic and Electrical Equipment
+VOD|Telecommunications|Telecommunications Service Providers
+GSK|Health Care|Pharmaceuticals and Biotechnology
+ULVR|Consumer Staples|Personal Care, Drug and Grocery Stores
+INF|Consumer Discretionary|Media
+NXT|Consumer Discretionary|Retailers
+RDSA|Energy|Oil, Gas and Coal
+RDSB|Energy|Oil, Gas and Coal
+DGE|Consumer Staples|Beverages
+SLA|Financials|Investment Banking and Brokerage Services
+BA.|Industrials|Aerospace and Defense
+CPG|Consumer Discretionary|Consumer Services
+ABF|Consumer Staples|Food Producers
+UU.|Utilities|Gas, Water and Multi-utilities
+DCC|Industrials|Industrial Support Services
+BP.|Energy|Oil, Gas and Coal
+SSE|Utilities|Electricity
+RR.|Industrials|Aerospace and Defense
+LAND|Real Estate|Real Estate Investment Trusts
+POLY|Basic Materials|Precious Metals and Mining
+HL.|Financials|Investment Banking and Brokerage Services
+NG.|Utilities|Gas, Water and Multi-utilities
+SGRO|Real Estate|Real Estate Investment Trusts
+AZN|Health Care|Pharmaceuticals and Biotechnology
+TSCO|Consumer Staples|Personal Care, Drug and Grocery Stores
+JD.|Consumer Discretionary|Retailers
+FRES|Basic Materials|Precious Metals and Mining
+HIK|Health Care|Pharmaceuticals and Biotechnology
+IAG|Consumer Discretionary|Travel and Leisure
+RKT|Consumer Staples|Personal Care, Drug and Grocery Stores
+SBRY|Consumer Staples|Personal Care, Drug and Grocery Stores
