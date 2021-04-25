@@ -115,6 +115,8 @@ def get_yahoo_api_data(stock_code: str, start_date: str, end_date: str) -> None:
 
 if __name__ == "__main__":
 
+   # If for code testing purpose, comment out page 2 to page 6 for better readability of console output.
+    
     pages = [
         "https://www.londonstockexchange.com/indices/ftse-100/constituents/table?lang=en",
         "https://www.londonstockexchange.com/indices/ftse-100/constituents/table?lang=en&page=2",
