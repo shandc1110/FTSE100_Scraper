@@ -173,7 +173,7 @@ if __name__ == "__main__":
     print('==============')
     print("Scrape historical pricing info")
     for s_code in stock_codes:
-        start_date, end_date = '2020-4-23', '2021-4-23'
+        start_date, end_date = '2020-4-23', '2021-4-24'
         print("Get yahoo data for stock code '{}' from {} to {}".format(s_code, start_date, end_date))
         get_yahoo_api_data(s_code, start_date, end_date)
     print('Scrape stock historical pricing info: Completed.')
