@@ -1,4 +1,3 @@
-Attribute VB_Name = "Module1"
 Sub Main()
 
 Application.ScreenUpdating = False
@@ -21,8 +20,9 @@ Dim ws As Worksheet: Set ws = ThisWorkbook.Worksheets("Price Data (Comp)")
 Dim wbTemp As Workbook
 Dim wsTemp As Worksheet
 Dim lRowMain, lRowTemp As Integer
-Dim priceRoot As String: priceRoot = ThisWorkbook.Path & "\Price\"
+Dim priceRoot As String: priceRoot = ThisWorkbook.Path & "\stock_pricing_info\"
 Dim filePath As String: filePath = Dir(priceRoot & "*.csv")
+
 
 Application.ScreenUpdating = False
 
@@ -32,8 +32,9 @@ ws.Range("A2:J" & lRowMain).Clear
 While filePath <> ""
     Set wbTemp = Workbooks.Open(priceRoot & filePath)
     Set wsTemp = wbTemp.Worksheets(Left(filePath, InStr(filePath, ".") - 1))
-    lRowTemp = wsTemp.Cells(Rows.Count, "A").End(xlUp).Row
-    lRowMain = ws.Cells(Rows.Count, "A").End(xlUp).Row + 1
+        lRowTemp = wsTemp.Cells(Rows.Count, "A").End(xlUp).Row
+        lRowMain = ws.Cells(Rows.Count, "A").End(xlUp).Row + 1
+    
     With ws
         .Range(.Cells(lRowMain, 1), .Cells(lRowMain + lRowTemp - 2, 1)).Value = Left(filePath, InStr(filePath, ".") - 1)
         .Range(.Cells(lRowMain, 2), .Cells(lRowMain + lRowTemp - 2, 2)).Value = wsTemp.Range("A2:A" & lRowTemp).Value
@@ -42,6 +43,7 @@ While filePath <> ""
             .Cells(i, 4).Value = (.Cells(i, 3).Value / .Cells(lRowMain, 3).Value) - 1
         Next i
     End With
+    
     wbTemp.Close
     Debug.Print filePath
     filePath = Dir
@@ -67,10 +69,11 @@ Sub import_LSE_data()
 Dim ws As Worksheet: Set ws = ThisWorkbook.Worksheets("Market Cap & Sector")
 Dim wbTemp As Workbook
 Dim wsTemp As Worksheet
-Dim lseRoot As String: lseRoot = ThisWorkbook.Path & "\LSE Client Data\"
+Dim lseRoot As String: lseRoot = ThisWorkbook.Path & "\"
 Dim filePath As String: filePath = Dir(lseRoot)
 Dim flag1, flag2 As Boolean
 Dim timeout As Integer
+
 
 lRowMain = ws.Cells(Rows.Count, "A").End(xlUp).Row + 1
 ws.Range("A2:C" & lRowMain).Clear
@@ -79,14 +82,16 @@ Do Until flag1 = True And flag2 = True Or timeout = 10
     If filePath = "sector_info.csv" Then
         Set wbTemp = Workbooks.Open(lseRoot & filePath)
         Set wsTemp = wbTemp.Worksheets(Left(filePath, InStr(filePath, ".") - 1))
-        lRowTemp = wsTemp.Cells(Rows.Count, "A").End(xlUp).Row
-        wsTemp.Range("A:A").TextToColumns Destination:=Range("A1"), DataType:=xlDelimited, _
-            TextQualifier:=xlDoubleQuote, ConsecutiveDelimiter:=False, Tab:=True, _
-            Semicolon:=False, Comma:=False, Space:=False, Other:=True, OtherChar _
-            :="|", FieldInfo:=Array(Array(1, 1), Array(2, 1), Array(3, 1)), _
-            TrailingMinusNumbers:=True
-        ws.Range("C2:D" & lRowTemp).Value = wsTemp.Range("B2:C" & lRowTemp).Value
-        wbTemp.Close savechanges:=False
+            lRowTemp = wsTemp.Cells(Rows.Count, "A").End(xlUp).Row
+            
+                wsTemp.Range("A:A").TextToColumns Destination:=Range("A1"), DataType:=xlDelimited, _
+                TextQualifier:=xlDoubleQuote, ConsecutiveDelimiter:=False, Tab:=True, _
+                Semicolon:=False, Comma:=False, Space:=False, Other:=True, OtherChar _
+                :="|", FieldInfo:=Array(Array(1, 1), Array(2, 1), Array(3, 1)), _
+                TrailingMinusNumbers:=True
+        
+            ws.Range("C2:D" & lRowTemp).Value = wsTemp.Range("B2:C" & lRowTemp).Value
+            wbTemp.Close savechanges:=False
         filePath = Dir
         flag1 = True
     End If
@@ -94,19 +99,22 @@ Do Until flag1 = True And flag2 = True Or timeout = 10
     If filePath = "stock_info.csv" Then
         Set wbTemp = Workbooks.Open(lseRoot & filePath)
         Set wsTemp = wbTemp.Worksheets(Left(filePath, InStr(filePath, ".") - 1))
-        lRowTemp = wsTemp.Cells(Rows.Count, "A").End(xlUp).Row
-        wsTemp.Range("A:A").TextToColumns Destination:=Range("A1"), DataType:=xlDelimited, _
-            TextQualifier:=xlDoubleQuote, ConsecutiveDelimiter:=False, Tab:=True, _
-            Semicolon:=False, Comma:=False, Space:=False, Other:=True, OtherChar _
-            :="|", FieldInfo:=Array(Array(1, 1), Array(2, 1)), _
-            TrailingMinusNumbers:=True
-        ws.Range("A2:B" & lRowTemp).Value = wsTemp.Range("A2:B" & lRowTemp).Value
-        wbTemp.Close savechanges:=False
+            lRowTemp = wsTemp.Cells(Rows.Count, "A").End(xlUp).Row
+        
+                wsTemp.Range("A:A").TextToColumns Destination:=Range("A1"), DataType:=xlDelimited, _
+                TextQualifier:=xlDoubleQuote, ConsecutiveDelimiter:=False, Tab:=True, _
+                Semicolon:=False, Comma:=False, Space:=False, Other:=True, OtherChar _
+                :="|", FieldInfo:=Array(Array(1, 1), Array(2, 1)), _
+                TrailingMinusNumbers:=True
+        
+            ws.Range("A2:B" & lRowTemp).Value = wsTemp.Range("A2:B" & lRowTemp).Value
+            wbTemp.Close savechanges:=False
         filePath = Dir
         flag2 = True
     End If
     timout = timeout + 1
 Loop
+
 
 lRowMain = ws.Cells(Rows.Count, "A").End(xlUp).Row
 ws.Range("A2:A" & lRowMain).Replace what:=".", replacement:=""
